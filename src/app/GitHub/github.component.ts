@@ -27,7 +27,7 @@ import { GitHubService } from './github.service';
 
     <div *ngFor="let user of users" class="media">
       <div class="media-left">
-        <a href="{{ user.html_url }}">
+        <a [routerLink]="['user', user.login, user.score]">
           <img class="media-object img" src="{{ user.avatar_url }}" alt="...">
         </a>
       </div>
